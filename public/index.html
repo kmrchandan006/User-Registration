@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="xyz.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:rgb(192, 204, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.container {
+    background-color:rgb(184, 11, 63);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(224, 4, 132, 0.1);
+    width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color:rgb(11, 132, 188);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(152, 248, 207);
+}
+   </style>
+   
+</head>
+<body>
+    <div class="container">
+        <form action="/submit_registration" method="post">
+            <h2>User Registration</h2>
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" title="Last name should not contain alphabets" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" title="Last name should not contain alphabets" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="number" id="mobile" name="mobile" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="login-id">Login ID</label>
+            <input type="text" id="login-id" name="login-id" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+    
+   
+</body>
+</html>
